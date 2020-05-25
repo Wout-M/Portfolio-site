@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect, useRef } from "react";
+import React, { Fragment, useState, useEffect/*, useRef*/ } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Title from "../../components/Title/Title";
 import About from "../About/About";
@@ -7,7 +7,7 @@ import Projects from "../Projects/Projects";
 import Grid from "@material-ui/core/Grid";
 import Avatar from "@material-ui/core/Avatar";
 import Contact from "../Contact/Contact"
-import { Fade } from "react-reveal";
+//import { Fade } from "react-reveal";
 
 const useStyles = makeStyles((theme) => ({
     large: {
@@ -30,16 +30,16 @@ const Main = () => {
     const [showAbout, setShowAbout] = useState(true);
     const [showStage, setShowStage] = useState(false);
     const [showProjects, setShowProjects] = useState(false);
-    const [fade, setFade] = useState(true);
+    //const [fade, setFade] = useState(true);
     const classes = useStyles();
 
-    const changeContent = (c) => {
+    /*const changeContent = (c) => {
     } 
 
     useEffect(() => {
             console.log(fade)
             //if(!fade)
-    }, [fade])
+    }, [fade])*/
 
     useEffect(() =>{
         switch (content.type.name) {
