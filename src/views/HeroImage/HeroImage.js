@@ -16,7 +16,7 @@ const HeroImage = (props) => {
             setReveal(true);
         }, 3000);
         return () => clearInterval(interval);
-    }, []);
+    }, [props.subtitles.length]);
 
     return (
         <Fragment >
