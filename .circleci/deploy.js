@@ -7,10 +7,10 @@ var config = {
     password: process.env.FTPPASS,
     host: process.env.FTPHOST,
     port: 21,
-    localRoot: __dirname + "/../",
+    localRoot: __dirname + "/../build/",
     remoteRoot: "/www/",
     // include: ["*", "**/*"],      // this would upload everything except dot files
-    include: ["build/**/*", "build/**/.*"],
+    include: ["**/*", "*"],
     // e.g. exclude sourcemaps, and ALL files in node_modules (including dot files)
     exclude: [
         "dist/**/*.map",
