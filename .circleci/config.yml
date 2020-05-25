@@ -1,29 +1,28 @@
 version: 2.1
 orbs:
-  react: thefrontside/react@0.2.0
-  node: circleci/node@1.1.6
+    react: thefrontside/react@0.2.0
+    node: circleci/node@1.1.6
 jobs:
-  build-and-test:
-    steps:
-      - checkout
-      - react/install
-      - react/eslint:
-          requires:
+    build-and-test:
+        steps:
+            - checkout
             - react/install
-      - react/build:
-          requires:
-            - react/install
-            - react/eslint
-  deploy:
-    executor:
-      name: node/default
-    steps:
-      - run: npm install ftp-deploy
-      - run: node .circleci/deploy.js
-      - run: echo "WE'RE ONLINE"
+            - react/eslint:
+                  requires:
+                      - react/install
+            - react/build:
+                  requires:
+                      - react/install
+                      - react/eslint
+    deploy:
+        executor:
+            name: node/default
+        steps:
+            - run: npm install ftp-deploy
+            - run: node .circleci/deploy.js
+            - run: echo "WE'RE ONLINE"
 workflows:
-  deploy:
-    jobs:
-      - build-and-test
-      - deploy
-      
+    deploy:
+        jobs:
+            - build-and-test
+            - deploy
