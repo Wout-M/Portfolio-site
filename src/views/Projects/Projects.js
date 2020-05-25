@@ -16,7 +16,7 @@ const Projects = () => {
         <Fragment>
             <Grid item className={classes.text}>
                 <Typography variant="body2">
-                    E
+                    WIP
                 </Typography>
 
             </Grid>

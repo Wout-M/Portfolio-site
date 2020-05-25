@@ -7,6 +7,7 @@ import Projects from "../Projects/Projects";
 import Grid from "@material-ui/core/Grid";
 import Avatar from "@material-ui/core/Avatar";
 import Contact from "../Contact/Contact"
+import wout from "../../assets/images/wout.jpg"
 //import { Fade } from "react-reveal";
 
 const useStyles = makeStyles((theme) => ({
@@ -76,7 +77,7 @@ const Main = () => {
                 <Avatar
                     alt="Wout"
                     className={classes.large}
-                    src="https://pbs.twimg.com/profile_images/1046875175277465600/pZ3CtYFX_400x400.jpg"
+                    src={wout}
                 />
                 <Contact/>
                 <Grid

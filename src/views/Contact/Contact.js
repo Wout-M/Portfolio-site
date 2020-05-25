@@ -4,8 +4,18 @@ import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import Grid from "@material-ui/core/Grid";
 import { GitHub, LinkedIn, Email, AccountBox } from "@material-ui/icons";
+import { makeStyles } from "@material-ui/core/styles";
+import pdf from "../../assets/documents/Wout_Mergaerts_CV.pdf";
+
+const useStyles = makeStyles({
+    button: {
+        color: "#4e4376",
+    },
+});
 
 const Contact = () => {
+    const classes = useStyles();
+
     return (
         <Fragment>
             <Grid
@@ -18,7 +28,11 @@ const Contact = () => {
                     <Tooltip title="Github" placement="top">
                         <Link href="https://github.com/Wout-M" target="_blank">
                             <IconButton aria-label="Github">
-                                <GitHub color="inherit" fontSize="large" />
+                                <GitHub
+                                    color="inherit"
+                                    fontSize="large"
+                                    className={classes.button}
+                                />
                             </IconButton>
                         </Link>
                     </Tooltip>
@@ -30,28 +44,42 @@ const Contact = () => {
                             target="_blank"
                         >
                             <IconButton aria-label="LinkedIn">
-                                <LinkedIn color="inherit" fontSize="large" />
+                                <LinkedIn
+                                    color="inherit"
+                                    fontSize="large"
+                                    className={classes.button}
+                                />
                             </IconButton>
                         </Link>
                     </Tooltip>
                 </Grid>
                 <Grid item>
                     <Tooltip title="E-mail" placement="top">
-                    <Link
+                        <Link
                             href="mailto:wout.mergaerts@telenet.be"
                             target="_blank"
                         >
-                        <IconButton aria-label="E-mail">
-                            <Email color="inherit" fontSize="large" />
-                        </IconButton>
+                            <IconButton aria-label="E-mail">
+                                <Email
+                                    color="inherit"
+                                    fontSize="large"
+                                    className={classes.button}
+                                />
+                            </IconButton>
                         </Link>
                     </Tooltip>
                 </Grid>
                 <Grid item>
                     <Tooltip title="CV" placement="top">
-                        <IconButton aria-label="CV">
-                            <AccountBox color="inherit" fontSize="large" />
-                        </IconButton>
+                        <Link href={pdf} target="_blank">
+                            <IconButton aria-label="CV">
+                                <AccountBox
+                                    color="inherit"
+                                    fontSize="large"
+                                    className={classes.button}
+                                />
+                            </IconButton>
+                        </Link>
                     </Tooltip>
                 </Grid>
             </Grid>
