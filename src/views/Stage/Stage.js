@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { Link, List, ListItem } from "@material-ui/core";
-import image from "../../assets/images/header.jpg";
 
 const useStyles = makeStyles((theme) => ({
     text: {
@@ -63,22 +62,22 @@ const Stage = () => {
                 </Typography>
                 <List>
                     <ListItem>
-                        <Link href={image} download>
+                        <Link href={""} download>
                             Plank van aanpak
                         </Link>
                     </ListItem>
                     <ListItem>
-                        <Link href={image} download>
+                        <Link href={""} download>
                             Research
                         </Link>
                     </ListItem>
                     <ListItem>
-                        <Link href={image} download>
+                        <Link href={""} download>
                             Werking
                         </Link>
                     </ListItem>
                     <ListItem>
-                        <Link href={image} download>
+                        <Link href={""} download>
                             Reflectie
                         </Link>
                     </ListItem>
