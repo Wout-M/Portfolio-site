@@ -10,9 +10,8 @@ jobs:
             - node/with-cache:
                   steps:
                       - run: npm install
-                      - run: npm run-script lint
                       - run: npm run-script build
-                      - run: npm run-script deploy
+                      - run: node .circleci/deploy.js
                       - run: echo "WE'RE ONLINE"
 workflows:
     push:
