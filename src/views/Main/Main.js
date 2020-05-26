@@ -11,6 +11,9 @@ import wout from "../../assets/images/wout.jpg"
 //import { Fade } from "react-reveal";
 
 const useStyles = makeStyles((theme) => ({
+    root : {
+        marginBottom: "100px"
+    },
     large: {
         width: theme.spacing(20),
         height: theme.spacing(20),
@@ -73,6 +76,7 @@ const Main = () => {
                 justify="center"
                 alignItems="center"
                 direction="column"
+                className={classes.root}
             >
                 <Avatar
                     alt="Wout"

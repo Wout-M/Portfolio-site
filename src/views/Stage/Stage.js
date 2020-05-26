@@ -20,7 +20,7 @@ const Stage = () => {
                     13 weken lang, waarvan 11 weken van thuis uit, heb ik
                     tijdens het laatste semester van mijn opleiding stage
                     gevolgd bij Brainjar. Brainjar is een bedrijf dat onderdeel
-                    is van de Raccoons Group en zich vooral bezighoud met AI as
+                    is van de Raccoons Group en zich vooral bezighoudt met AI as
                     a service. Hierbij maken ze end-to-end applicaties met AI op
                     maat voor bedrijven. Eén van hun motto’s hierbij is de
                     “human in the loop” waar bij de belangrijkste beslissing van
@@ -63,7 +63,7 @@ const Stage = () => {
                 <List>
                     <ListItem>
                         <Link href={""} download>
-                            Plank van aanpak
+                            Plan van aanpak
                         </Link>
                     </ListItem>
                     <ListItem>

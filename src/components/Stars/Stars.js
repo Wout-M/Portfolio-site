@@ -1,11 +1,15 @@
 import React, { Fragment } from "react";
-
 import "./Stars.scss";
+import ScrollButton from "../ScrollButton/ScrollButton";
 
 const Stars = (props) => {
     return (
         <Fragment>
-            <div className="hero" style={{ height: props.totalHeight }}>
+            <div
+                className="hero"
+                id="hero"
+                style={{ height: props.totalHeight }}
+            >
                 <div className="hero-text">{props.children}</div>
 
                 <div
@@ -19,9 +23,7 @@ const Stars = (props) => {
                     </div>
                 </div>
 
-                <div
-                    className="wave"
-                >
+                <div className="wave">
                     <svg
                         viewBox="0 0 500 150"
                         preserveAspectRatio="none"
@@ -34,9 +36,15 @@ const Stars = (props) => {
                         ></path>
                     </svg>
                 </div>
+                <div className="hero-button">
+                    <ScrollButton />
+                </div>
             </div>
         </Fragment>
     );
 };
 
 export default Stars;
+
+/*
+ */
