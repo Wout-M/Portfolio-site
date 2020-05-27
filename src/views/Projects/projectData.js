@@ -1,13 +1,23 @@
-import wout from "../../assets/images/wout.jpg"
+import wout from "../../assets/images/wout.jpg";
 
 const tileData = [
-  {
-    img: {wout},
-    title: 'Test',
-    author: 'Wout',
-    cols: 2,
-    featured: true,
-  }/*,
+    {
+        img: { wout },
+        title: "Test",
+        text: [
+            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "Dit is nog een andere paragraaf",
+            "dit is een derde",
+            "dit is een vierde",
+        ],
+        links: [
+            { url: "https://www.youtube.com/", text: "Youtube" },
+            { url: "https://www.youtube.com/", text: "Youtube" },
+            { url: "https://www.youtube.com/", text: "Youtube" },
+        ],
+    },
+
+    /*,
   {
     img: '/static/images/grid-list/burgers.jpg',
     title: 'Tasty burger',
