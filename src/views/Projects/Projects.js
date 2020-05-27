@@ -36,6 +36,7 @@ const Projects = () => {
     const [openDialog, setOpenDialog] = useState(false);
     const [content, setContent] = useState({
         title: "",
+        category: "",
         text: [],
         links: [],
         image: "",
@@ -45,14 +46,14 @@ const Projects = () => {
         setOpenDialog(false);
     };
 
-    const openHandler = (title, text, image, links) => {
+    const openHandler = (title, text, image, links, category) => {
         setOpenDialog(true);
-
         setContent({
             title: title,
+            category: category,
             text: text,
-            image: image,
             links: links,
+            image: image
         });
     };
 
@@ -76,7 +77,8 @@ const Projects = () => {
                                 tile.title,
                                 tile.text,
                                 Object.values(tile.img)[0],
-                                tile.links
+                                tile.links,
+                                tile.category
                             )
                         }
                     >
@@ -89,14 +91,6 @@ const Projects = () => {
                                 className={classes.titleBar}
                                 titlePosition="top"
                                 title={tile.title}
-                                /*onClick={() =>
-                                    openHandler(
-                                        tile.title,
-                                        tile.text,
-                                        Object.values(tile.img)[0],
-                                        tile.links
-                                    )
-                                }*/
                             />
                     </GridListTile>
                 ))}
@@ -104,10 +98,7 @@ const Projects = () => {
             <ProjectDialog
                 open={openDialog}
                 closing={closeHandler}
-                title={content.title}
-                content={content.text}
-                image={content.image}
-                links={content.links}
+                content={content}
             />
         </div>
     );

@@ -16,7 +16,7 @@ const Stage = () => {
     return (
         <Fragment>
             <Grid item className={classes.text}>
-                <Typography variant="body2">
+                <Typography >
                     13 weken lang, waarvan 11 weken van thuis uit, heb ik
                     tijdens het laatste semester van mijn opleiding stage
                     gevolgd bij Brainjar. Brainjar is een bedrijf dat onderdeel
@@ -30,7 +30,7 @@ const Stage = () => {
                     hiermee gemaakt kunnen worden.
                 </Typography>
                 <br />
-                <Typography variant="body2">
+                <Typography>
                     Eén van deze onderzoeken is mijn stage, waarbij ik
                     onderzocht hoe je een objectieve jury kan maken voor een
                     specifieke sport door middel van AI. Hierbij heb ik eerst
@@ -40,7 +40,7 @@ const Stage = () => {
                     kwam hier als beste kandidaat uit.
                 </Typography>
                 <br />
-                <Typography variant="body2">
+                <Typography >
                     Vervolgens heb ik onderzoek gedaan naar het verbeteren van
                     dit model door bijvoorbeeld post-processing van de data.
                     Hierbij worden fouten die door het model gemaakt zijn uit de

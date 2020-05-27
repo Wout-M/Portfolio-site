@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Dialog from "@material-ui/core/Dialog";
 import MuiDialogTitle from "@material-ui/core/DialogTitle";
@@ -8,6 +8,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
 import { Link } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
+import Chip from '@material-ui/core/Chip';
 
 const styles = (theme) => ({
     root: {
@@ -24,7 +25,7 @@ const styles = (theme) => ({
 
 const useStyles = makeStyles((theme) => ({
     imagecontainer: {
-        overflow:"hidden"
+        overflow: "hidden",
     },
     image: {
         margin: theme.spacing(2),
@@ -34,10 +35,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const DialogTitle = withStyles(styles)((props) => {
-    const { children, classes, onClose, ...other } = props;
+    const { children, classes, onClose, category, ...other } = props;
+    console.log(props.category)
     return (
         <MuiDialogTitle disableTypography className={classes.root} {...other}>
-            <Typography variant="h6">{children}</Typography>
+            <Typography gutterBottom variant="h6">{children}</Typography>
+            <Chip label={category}/>
             {onClose ? (
                 <IconButton
                     aria-label="close"
@@ -57,7 +60,6 @@ const DialogContent = withStyles((theme) => ({
     },
 }))(MuiDialogContent);
 
-
 const ProjectDialog = (props) => {
     const classes = useStyles();
 
@@ -71,36 +73,40 @@ const ProjectDialog = (props) => {
                 <DialogTitle
                     id="customized-dialog-title"
                     onClose={props.closing}
+                    category={props.content.category}
                 >
-                    {props.title}
+                    {props.content.title}
+                    
                 </DialogTitle>
-                
+
                 <DialogContent dividers>
-                <Grid
-                container
-                justify="center"
-                alignItems="center"
-                direction="row"
-            >
-                <img
-                    src={props.image}
-                    alt={props.title}
-                    className={classes.image}
-                />
-                </Grid>
-                    {props.content.map((paragraph) => (
-                        <Typography gutterBottom key={paragraph}>
-                            {paragraph}
-                        </Typography>
+                    <Grid
+                        container
+                        justify="center"
+                        alignItems="center"
+                        direction="row"
+                    >
+                        <img
+                            src={props.content.image}
+                            alt={props.content.title}
+                            className={classes.image}
+                        />
+                    </Grid>
+                    {props.content.text.map((paragraph) => (
+                        <Fragment>
+                            <Typography key={paragraph}>{paragraph}</Typography>
+                            <br />
+                        </Fragment>
                     ))}
                     <br />
-                    {props.links.map((link) => (
+                    {props.content.links.map((link) => (
                         <Typography gutterBottom key={link.text}>
                             <Link href={link.url} target="_blank">
                                 {link.text}
                             </Link>
                         </Typography>
                     ))}
+                    <br/>
                 </DialogContent>
             </Dialog>
         </div>

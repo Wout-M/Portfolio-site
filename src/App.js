@@ -10,7 +10,6 @@ function App() {
                 subtitles={["Web Developer", "Software Developer", "AI Scientist"]}
             />
             <Main/>
-            
         </Fragment>
     );
 }
