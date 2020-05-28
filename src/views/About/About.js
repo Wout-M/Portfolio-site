@@ -15,13 +15,13 @@ const About = () => {
     return (
         <Fragment>
             <Grid item className={classes.text}>
-                <Typography variant="body2">
+                <Typography >
                     Hallo, mijn naam is Wout Mergaerts en momenteel ben ik een
                     laatstejaarsstudent aan de IT Factory van Thomas More Kempen
                     in Geel.
                 </Typography>
-                <br />
-                <Typography variant="body2">
+                <br/>
+                <Typography >
                     Van kleins af aan was ik al geïnteresseerd in alles wat met
                     technologie te maken heeft. Daarbij ging ik vaak zelf op
                     ontdekking om nieuwe dingen te leren, zoals bijvoorbeeld
