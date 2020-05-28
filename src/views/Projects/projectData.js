@@ -40,7 +40,7 @@ const tileData = [
 
     {
         img: { harrypotter },
-        title: "McG Bot",
+        title: "McGonagall Bot",
         category: categories.discordbot,
         text: [
             `Discord is een sociaal media platform waarmee mensen van over heel de wereld met elkaar kunnen chatten, bellen of videobellen. 
