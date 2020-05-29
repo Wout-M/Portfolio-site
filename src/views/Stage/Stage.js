@@ -1,22 +1,14 @@
 import React, { Fragment } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { Link, List, ListItem } from "@material-ui/core";
-
-const useStyles = makeStyles((theme) => ({
-    text: {
-        textAlign: "left",
-    },
-}));
+import classes from "./Stage.module.css"
 
 const Stage = () => {
-    const classes = useStyles();
-
     return (
         <Fragment>
-            <Grid item className={classes.text}>
-                <Typography>
+            <Grid item>
+                <Typography className={classes.text}>
                     Tijdens mijn Erasmussemester heb ik kennisgemaakt met AI en
                     Machine Learning en was ik er direct zeer geïnteresseerd in.
                     Hierdoor heb ik 13 weken lang, waarvan 11 weken van thuis
@@ -31,8 +23,7 @@ const Stage = () => {
                     verschillende mogelijkheden en limieten van AI en de
                     toepassingen die hiermee gemaakt kunnen worden.
                 </Typography>
-                <br />
-                <Typography>
+                <Typography className={classes.text}>
                     Eén van deze onderzoeken is mijn stage, waarbij ik
                     onderzocht hoe je een objectieve jury kan maken voor een
                     specifieke sport door middel van AI. Hierbij heb ik eerst
@@ -41,8 +32,7 @@ const Stage = () => {
                     beeld te kunnen brengen voor verdere analyse. DeepLabCut
                     kwam hier als beste kandidaat uit.
                 </Typography>
-                <br />
-                <Typography>
+                <Typography className={classes.text}>
                     Vervolgens heb ik onderzoek gedaan naar het verbeteren van
                     dit model door bijvoorbeeld post-processing van de data.
                     Hierbij worden fouten die door het model gemaakt zijn uit de
@@ -50,14 +40,12 @@ const Stage = () => {
                     gebouwd waarbij de klant zelf video’s kan laten analyseren
                     door het model.
                 </Typography>
-                <br />
-                <Typography>
+                <Typography className={classes.text}>
                     Ten slotte heb ik onderzoek gedaan naar de mogelijkheid om
                     een score te geven aan één specifieke oefening door middel
                     van een AI model dat de eerder genoemde data analyseert.
                 </Typography>
-                <br />
-                <Typography>
+                <Typography >
                     Hieronder vindt u de documenten die ik in het kader van mijn
                     stage heb gemaakt en die dieper ingaan op bepaalde aspecten
                     hiervan:

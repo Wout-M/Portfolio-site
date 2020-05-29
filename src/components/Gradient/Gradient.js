@@ -1,61 +1,15 @@
 import React, { Fragment } from "react";
 import ScrollButton from "../ScrollButton/ScrollButton";
 import Stars from "./Stars/Stars";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles({
-    hero: {
-        display: "inline-block",
-        width: "100%",
-        position: "relative",
-        height: (props) => props.totalHeight,
-    },
-    bg: {
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: (props) => props.starsHeight,
-        background: "#2b5876",
-        background: "-webkit-linear-gradient(to bottom,#4e4376,#2b5876)",
-        background: "linear-gradient(to bottom,#2b106a,#006cb7)",
-        zIndex: -1,
-    },
-    text: {
-        textAlign: "center",
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        color: "white",
-    },
-    button: {
-        textAlign: "center",
-        position: "absolute",
-        top: "90%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-    },
-    wave: {
-        textAlign: "center",
-        position: "absolute",
-        bottom: "0%",
-        color: "white",
-        width: "100%",
-        height: "250px",
-        overflow: "hidden",
-    },
-});
+import classes from "./Gradient.module.css"
 
 const Gradient = (props) => {
-    const classes = useStyles(props);
-
     return (
         <Fragment>
-            <div className={classes.hero} id="hero">
+            <div className={classes.hero} id="hero" style={{height: props.totalHeight}}>
                 <div className={classes.text}>{props.children}</div>
 
-                <div className={classes.bg}>
+                <div className={classes.bg} style={{height: props.gradientHeight}}>
                     <Stars />
                 </div>
                 <div className={classes.wave}>

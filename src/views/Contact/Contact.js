@@ -4,17 +4,10 @@ import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import Grid from "@material-ui/core/Grid";
 import { GitHub, LinkedIn, Email, AccountBox } from "@material-ui/icons";
-import { makeStyles } from "@material-ui/core/styles";
 import pdf from "../../assets/documents/Wout_Mergaerts_CV.pdf";
-
-const useStyles = makeStyles({
-    button: {
-        color: "#2b106a",
-    },
-});
+import classes from "./Contact.module.css"
 
 const Contact = () => {
-    const classes = useStyles();
 
     return (
         <Fragment>

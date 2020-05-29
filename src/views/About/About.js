@@ -1,27 +1,18 @@
 import React, { Fragment } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-
-const useStyles = makeStyles((theme) => ({
-    text: {
-        textAlign: "left",
-    },
-}));
+import classes from "./About.module.css"
 
 const About = () => {
-    const classes = useStyles();
-
     return (
         <Fragment>
-            <Grid item className={classes.text}>
-                <Typography >
+            <Grid item >
+                <Typography className={classes.text} >
                     Hallo, mijn naam is Wout Mergaerts en momenteel ben ik een
                     laatstejaarsstudent aan de IT Factory van Thomas More Kempen
                     in Geel.
                 </Typography>
-                <br/>
-                <Typography >
+                <Typography className={classes.text}>
                     Van kleins af aan was ik al geïnteresseerd in alles wat met
                     technologie te maken heeft. Daarbij ging ik vaak zelf op
                     ontdekking om nieuwe dingen te leren, zoals bijvoorbeeld
