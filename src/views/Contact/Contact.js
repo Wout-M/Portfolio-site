@@ -9,7 +9,7 @@ import pdf from "../../assets/documents/Wout_Mergaerts_CV.pdf";
 
 const useStyles = makeStyles({
     button: {
-        color: "#4e4376",
+        color: "#2b106a",
     },
 });
 

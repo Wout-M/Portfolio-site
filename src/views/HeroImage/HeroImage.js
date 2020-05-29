@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Fade from "react-reveal/Fade";
 import Typography from "@material-ui/core/Typography";
-import Stars from "../../components/Stars/Stars";
+import Gradient from "../../components/Gradient/Gradient";
 
 const HeroImage = (props) => {
     const [subtitleIndex, setSubtitleIndex] = useState(0);
@@ -20,7 +20,7 @@ const HeroImage = (props) => {
 
     return (
         <Fragment >
-            <Stars  totalHeight="100vh" starsHeight="90vh">
+            <Gradient  totalHeight="100vh" starsHeight="90vh">
                 <Fade top cascade>
                     <Typography variant="h2" component="h1">
                         {props.title}
@@ -31,7 +31,7 @@ const HeroImage = (props) => {
                         {props.subtitles[subtitleIndex]}
                     </Typography>
                 </Fade>
-            </Stars>
+            </Gradient>
         </Fragment>
     );
 };

@@ -33,7 +33,7 @@ const ScrollButton = () => {
                     style={{
                         color: "#fff",
                         background:
-                            "linear-gradient(to right,#4e4376, #2b5876)",
+                            "linear-gradient(to bottom,#2b106a, #006cb7)",
                     }}
                     onClick={() => {
                         window.scrollTo({

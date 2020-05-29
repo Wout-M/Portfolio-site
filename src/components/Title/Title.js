@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     line: {
         height: "3px",
         width: "100%",
-        background: "linear-gradient(to right, #8173aa ,#00a1a1)"
+        background: "linear-gradient(to right, #593896 ,#0093c4)"
     }
 });
 

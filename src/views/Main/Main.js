@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: "600px",
         paddingLeft: "10px",
         margin: "10px",
-        borderLeft: "2px solid",
-        borderImage: "linear-gradient(to top, #8173aa ,#00a1a1)",
+        borderLeft: "3px solid",
+        borderImage: "linear-gradient(to top,  #593896 ,#0093c4)",
         borderImageSlice: "1",
     },
 }));
