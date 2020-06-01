@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
-import projectData from "./projectData";
 import ProjectDialog from "./ProjectDialog/ProjectDialog";
-import classes from "./Project.module.css"
 
+import classes from "./Project.module.css";
+import projectData from "./projectData";
 
 const Projects = () => {
     const [openDialog, setOpenDialog] = useState(false);
@@ -28,7 +28,7 @@ const Projects = () => {
             category: category,
             text: text,
             links: links,
-            image: image
+            image: image,
         });
     };
 
@@ -36,7 +36,6 @@ const Projects = () => {
         <div className={classes.root}>
             <GridList cellHeight={180} className={classes.gridList}>
                 {projectData.map((tile) => (
-
                     <GridListTile
                         key={tile.title}
                         classes={{ tile: classes.tile }}
@@ -53,15 +52,16 @@ const Projects = () => {
                         <img
                             src={Object.values(tile.img)[0]}
                             alt={tile.title}
-                            
                         />
-                            <GridListTileBar
-                                style={{background:
+                        <GridListTileBar
+                            style={{
+                                background:
                                     "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, " +
-                                    "rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)"}}
-                                titlePosition="top"
-                                title={tile.title}
-                            />
+                                    "rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
+                            }}
+                            titlePosition="top"
+                            title={tile.title}
+                        />
                     </GridListTile>
                 ))}
             </GridList>

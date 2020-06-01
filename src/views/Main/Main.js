@@ -1,23 +1,24 @@
-import React, { Fragment, useState, useEffect/*, useRef*/ } from "react";
+import React, { Fragment, useState, useEffect /*, useRef*/ } from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import Avatar from "@material-ui/core/Avatar";
+import Fade from "react-reveal/Fade";
+
 import Title from "../../components/Title/Title";
 import About from "../About/About";
 import Stage from "../Stage/Stage";
 import Projects from "../Projects/Projects";
-import Grid from "@material-ui/core/Grid";
-import Avatar from "@material-ui/core/Avatar";
-import Contact from "../Contact/Contact"
-import wout from "../../assets/images/wout.jpg"
-//import { Fade } from "react-reveal";
+import Contact from "../Contact/Contact";
+import wout from "../../assets/images/wout.jpg";
 
 const useStyles = makeStyles((theme) => ({
-    root : {
-        marginBottom: "100px"
+    root: {
+        marginBottom: "100px",
     },
     large: {
         width: theme.spacing(20),
         height: theme.spacing(20),
-        marginBottom: "20px"
+        marginBottom: "20px",
     },
     text: {
         maxWidth: "600px",
@@ -34,18 +35,18 @@ const Main = () => {
     const [showAbout, setShowAbout] = useState(true);
     const [showStage, setShowStage] = useState(false);
     const [showProjects, setShowProjects] = useState(false);
-    //const [fade, setFade] = useState(true);
+    const [fade, setFade] = useState(true);
     const classes = useStyles();
+    const duration = 800;
 
-    /*const changeContent = (c) => {
-    } 
+    const changeContent = (c) => {
+        setFade(false);
+        setContent(c);
+    };
 
     useEffect(() => {
-            console.log(fade)
-            //if(!fade)
-    }, [fade])*/
+        let timer = setTimeout(setFade(true), duration);
 
-    useEffect(() =>{
         switch (content.type.name) {
             case About.name:
                 setShowAbout(true);
@@ -66,8 +67,10 @@ const Main = () => {
 
             default:
                 break;
-        }        
-    }, [content])
+        }
+
+        clearTimeout(timer);
+    }, [content]);
 
     return (
         <Fragment>
@@ -78,19 +81,15 @@ const Main = () => {
                 direction="column"
                 className={classes.root}
             >
-                <Avatar
-                    alt="Wout"
-                    className={classes.large}
-                    src={wout}
-                />
-                <Contact/>
+                <Avatar alt="Wout" className={classes.large} src={wout} />
+                <Contact />
                 <Grid
                     container
                     justify="center"
                     alignItems="flex-start"
                     direction="row"
                 >
-                    <Grid item >
+                    <Grid item>
                         <Grid
                             container
                             justify="flex-start"
@@ -99,19 +98,19 @@ const Main = () => {
                         >
                             <Title
                                 line={showAbout}
-                                clicked={() => setContent(<About />)}
+                                clicked={() => changeContent(<About />)}
                             >
                                 Over mij
                             </Title>
                             <Title
                                 line={showStage}
-                                clicked={() => setContent(<Stage />)}
+                                clicked={() => changeContent(<Stage />)}
                             >
                                 Stage
                             </Title>
                             <Title
                                 line={showProjects}
-                                clicked={() => setContent(<Projects />)}
+                                clicked={() => changeContent(<Projects />)}
                             >
                                 Realisaties
                             </Title>
@@ -119,7 +118,9 @@ const Main = () => {
                     </Grid>
 
                     <Grid item className={classes.text} xs="12" sm="8">
-                        {content}
+                        <Fade when={fade} duration={duration}>
+                            {content}
+                        </Fade>
                     </Grid>
                 </Grid>
             </Grid>

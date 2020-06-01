@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import ScrollButton from "../ScrollButton/ScrollButton";
 import Stars from "./Stars/Stars";
+
 import classes from "./Gradient.module.css"
 
 const Gradient = (props) => {
@@ -12,6 +13,7 @@ const Gradient = (props) => {
                 <div className={classes.bg} style={{height: props.gradientHeight}}>
                     <Stars />
                 </div>
+
                 <div className={classes.wave}>
                     <svg
                         viewBox="0 0 500 150"
@@ -25,6 +27,7 @@ const Gradient = (props) => {
                         ></path>
                     </svg>
                 </div>
+
                 <div className={classes.button}>
                     <ScrollButton />
                 </div>

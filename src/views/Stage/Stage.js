@@ -1,8 +1,11 @@
 import React, { Fragment } from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import { Link, List, ListItem } from "@material-ui/core";
-import classes from "./Stage.module.css"
+import Link from "@material-ui/core/Link";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+
+import classes from "./Stage.module.css";
 
 const Stage = () => {
     return (
@@ -45,7 +48,7 @@ const Stage = () => {
                     een score te geven aan één specifieke oefening door middel
                     van een AI model dat de eerder genoemde data analyseert.
                 </Typography>
-                <Typography >
+                <Typography>
                     Hieronder vindt u de documenten die ik in het kader van mijn
                     stage heb gemaakt en die dieper ingaan op bepaalde aspecten
                     hiervan:

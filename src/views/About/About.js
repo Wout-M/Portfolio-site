@@ -1,18 +1,19 @@
 import React, { Fragment } from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import classes from "./About.module.css"
+
+import classes from "./About.module.css";
 
 const About = () => {
     return (
         <Fragment>
-            <Grid item >
-                <Typography className={classes.text} >
+            <Grid item>
+                <Typography className={classes.text}>
                     Hallo, mijn naam is Wout Mergaerts en momenteel ben ik een
                     laatstejaarsstudent aan de IT Factory van Thomas More Kempen
                     in Geel.
                 </Typography>
-                <Typography className={classes.text}>
+                <Typography>
                     Van kleins af aan was ik al geïnteresseerd in alles wat met
                     technologie te maken heeft. Daarbij ging ik vaak zelf op
                     ontdekking om nieuwe dingen te leren, zoals bijvoorbeeld

@@ -6,10 +6,11 @@ import MuiDialogContent from "@material-ui/core/DialogContent";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
-import { Link } from "@material-ui/core";
+import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
-import Chip from '@material-ui/core/Chip';
-import classes from "./ProjectDialog.module.css"
+import Chip from "@material-ui/core/Chip";
+
+import classes from "./ProjectDialog.module.css";
 
 const styles = (theme) => ({
     root: {
@@ -24,14 +25,15 @@ const styles = (theme) => ({
     },
 });
 
-
 const DialogTitle = withStyles(styles)((props) => {
     const { children, classes, onClose, category, ...other } = props;
 
     return (
         <MuiDialogTitle disableTypography className={classes.root} {...other}>
-            <Typography gutterBottom variant="h6">{children}</Typography>
-            <Chip label={category}/>
+            <Typography gutterBottom variant="h6">
+                {children}
+            </Typography>
+            <Chip label={category} />
             {onClose ? (
                 <IconButton
                     aria-label="close"
@@ -65,7 +67,6 @@ const ProjectDialog = (props) => {
                     category={props.content.category}
                 >
                     {props.content.title}
-                    
                 </DialogTitle>
 
                 <DialogContent dividers>
@@ -95,7 +96,7 @@ const ProjectDialog = (props) => {
                             </Link>
                         </Typography>
                     ))}
-                    <br/>
+                    <br />
                 </DialogContent>
             </Dialog>
         </div>

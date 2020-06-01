@@ -62,7 +62,7 @@ const tileData = [
                 text: "De Github repo",
             },
         ],
-    }
+    },
 ];
 
 export default tileData;
