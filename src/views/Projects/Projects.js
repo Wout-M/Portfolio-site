@@ -7,6 +7,12 @@ import ProjectDialog from "./ProjectDialog/ProjectDialog";
 import classes from "./Project.module.css";
 import projectData from "./projectData";
 
+const sorting = (a,b) => {
+    if(a.categories[0] === b.categories[0]) return a.title.localeCompare(b.title)
+
+    return a.categories[0].localeCompare(b.categories[0])
+}
+
 const Projects = () => {
     const [openDialog, setOpenDialog] = useState(false);
     const [content, setContent] = useState({
@@ -14,6 +20,7 @@ const Projects = () => {
         category: "",
         text: [],
         links: [],
+        technologies: [],
         image: "",
     });
 
@@ -21,13 +28,14 @@ const Projects = () => {
         setOpenDialog(false);
     };
 
-    const openHandler = (title, text, image, links, category) => {
+    const openHandler = (title, text, image, links, categories, technologies) => {
         setOpenDialog(true);
         setContent({
             title: title,
-            category: category,
+            categories: categories,
             text: text,
             links: links,
+            technologies: technologies ,
             image: image,
         });
     };
@@ -35,7 +43,7 @@ const Projects = () => {
     return (
         <div className={classes.root}>
             <GridList cellHeight={180} className={classes.gridList}>
-                {projectData.map((tile) => (
+                {projectData.sort((a,b) => sorting(a,b)).map((tile) => (
                     <GridListTile
                         key={tile.title}
                         classes={{ tile: classes.tile }}
@@ -43,23 +51,19 @@ const Projects = () => {
                             openHandler(
                                 tile.title,
                                 tile.text,
-                                Object.values(tile.img)[0],
+                                tile.img,
                                 tile.links,
-                                tile.category
+                                tile.categories,
+                                tile.technologies
                             )
                         }
                     >
                         <img
-                            src={Object.values(tile.img)[0]}
+                            src={tile.img}
                             alt={tile.title}
                         />
                         <GridListTileBar
-                            style={{
-                                background:
-                                    "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, " +
-                                    "rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
-                            }}
-                            titlePosition="top"
+                            titlePosition="bottom"
                             title={tile.title}
                         />
                     </GridListTile>

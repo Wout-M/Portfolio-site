@@ -13,12 +13,12 @@ to {
 const spawnStars = (amount) => {
     let value = `${Math.floor(Math.random() * 2000)}px ${Math.floor(
         Math.random() * 2000
-    )}px #888`;
+    )}px #999`;
     let i;
     for (i = 0; i < amount; i++) {
         value += `, ${Math.floor(Math.random() * 2000)}px ${Math.floor(
             Math.random() * 2000
-        )}px #888`;
+        )}px #999`;
     }
     return value;
 };
