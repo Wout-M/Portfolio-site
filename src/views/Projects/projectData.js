@@ -1,25 +1,51 @@
-import kgb from "../../assets/images/kgb.jpg";
+import kgb from "../../assets/images/KGB.png";
 import harrypotter from "../../assets/images/harrypotter.jpg";
-import exwi from "../../assets/images/SigmaLogo.png";
+import exwi from "../../assets/images/sum-sign.png";
 import snake from "../../assets/images/snake.png";
 import spotify from "../../assets/images/vinyl.jpg";
 import feelgood from "../../assets/images/logo.jpg";
-import nvdos from "../../assets/images/nvdos.jpg"
+import nvdos from "../../assets/images/nvdos.jpg";
+import unity from "../../assets/images/unity.jpeg"
 
 import statusrapport from "../../assets/documents/statusrapport.pdf";
-import model from "../../assets/documents/business_model.pdf"
+import model from "../../assets/documents/business_model.pdf";
+import trainingssessie from "../../assets/documents/Trainingssessie_lesbundel.pdf"
 
 const categories = {
     discordbot: "Discord bot",
     AI: "AI",
     web: "Web development",
-    event: "Evenement"
+    event: "Evenement",
+    unity: "Unity"
 };
 
 const tileData = [
     {
+        img: unity,
+        title: "Unity trainingssessie",
+        categories: [categories.unity],
+        text: [
+            `In het tweede jaar van mijn studies kregen we een eerste kans om onze kennis te kunnen toepassen door een trainingssessie te geven over een informatica
+            gerelateerd onderwerp. Samen met een medestudent ben ik les gaan geven aan 2 studenten met autisme in een middelbare school. Elk van ons gaf aan 1 student 
+            les, waarbij ik Unity aanleerde aan de ene en mijn medestudent HMTL & CSS aanleerde aan de andere.`,
+            `Mijn student had al een basiskennis van zowel Unity als C# en had mij ook op voorhand één van zijn projecten doorgestuurd. Dit project heb ik verder uitgewerkt 
+            tot een kleine volwaardige game met random level generatie, meer onderdelen in de game en een hoofd- en pauzemenu.`,
+            `In de onderstaande links kan u mijn lesbundel vinden dat ik gemaakt heb voor de student.`,
+        ],
+        technologies: [
+            "C#",
+            "Unity",
+        ],
+        links: [
+            {
+                url: trainingssessie,
+                text: "Lesbundel",
+            },
+        ],
+    },
+    {
         img: spotify,
-        title: "Spotify valence",
+        title: "Spotify Valence",
         categories: [categories.AI],
         text: [
             `Tijdens mijn Erasmussemester in Noorwegen heb ik het vak "DAT158 Machine Learning and Advanced Algorithms" gehad, waarbij ik kennismaakte 
@@ -31,7 +57,12 @@ const tileData = [
             Tijdens de ontwikkeling waren zij wel telkens aanwezig en heb ik ook alles wat ik gedaan heb uitgelegd zodat zij na de opdracht op hetzelfde niveau zaten.`,
             `Met de onderstaande link kan je naar de Github repo gaan om te zien wat we allemaal toegepast hebben.`,
         ],
-        technologies: ["Python", "Machine Learning"],
+        technologies: [
+            "Python",
+            "Data processing: Encoders, Numpy, Pandas, Pipelines, Seaborn",
+            "Regression modellen: Linear, Decision Tree, Random Forest, Gradient Boosting, Extra Trees, Support Vector Machine, XGBoost",
+            "Modellen combineren: vecstack, ML-Ensemble",
+        ],
         links: [
             {
                 url: "https://github.com/Wout-M/ML-Assignment2",
@@ -57,7 +88,8 @@ const tileData = [
                 text: "Business model",
             },
             {
-                url: "https://www.hln.be/in-de-buurt/vorselaar/nacht-van-de-ondernemende-student-in-thomas-more-hogeschool~a3736f1c/",
+                url:
+                    "https://www.hln.be/in-de-buurt/vorselaar/nacht-van-de-ondernemende-student-in-thomas-more-hogeschool~a3736f1c/",
                 text: "Artikel over de nacht",
             },
         ],
@@ -65,7 +97,7 @@ const tileData = [
     {
         img: snake,
         title: "Face snake",
-        categories: [ categories.AI, categories.web],
+        categories: [categories.AI, categories.web],
         text: [
             `Om mijn kennis en de limieten van React en AI te testen wou ik proberen om de twee te combineren. Uit deze mix is "Face snake" gekomen,
             waarbij je het bekende spel Snake kan besturen door met je gezicht voor de camera te bewegen.`,
@@ -75,9 +107,9 @@ const tileData = [
             `Met de onderstaande link kan je Face snake live uitpoberen.`,
         ],
         technologies: [
-            "React",
             "Javascript",
-            "Tensorflow.js",
+            "Tensorflow.js: MediaPipe Facemesh",
+            "React",
             "CSS",
             "Material-UI",
         ],
@@ -101,7 +133,7 @@ const tileData = [
             `Bij het verplaatsen van de hosting van de originele site naar mijn hosting zijn er door enkele onbekende technische problemen een paar functionaliteiten van de webapplicatie 
             verloren gegaan, maar met de onderstaande link kan deze bezocht worden.`,
         ],
-        technologies: ["PHP", "MVC", "HTML", "CSS", "Bootstrap"],
+        technologies: ["PHP", "MVC model", "HTML5", "CSS3", "Bootstrap"],
         links: [
             {
                 url: statusrapport,
@@ -132,10 +164,13 @@ const tileData = [
             nieuwe functies. Sinds kort heb de bot ook helemaal van scratch opnieuw gemaakt met al de extra kennis die ik de laatste 2 jaar heb opgedaan, waardoor het 
             veel stabieler is, automatische herstarting bij eventuele crashes en ook gemonitord kan worden vanuit een dashboard.`,
         ],
-        technologies: ["Node.js, Discord.js"],
+        technologies: [
+            "Node.js: Axios, Chalk, Discord.js, Moment, PM2",
+            "Javascript",
+        ],
         links: [
             {
-                url: "https://discord.gg/XA8MZkV",
+                url: "https://discord.gg/B3vdnpd",
                 text: "Join de test server met de bot",
             },
             {
@@ -159,10 +194,13 @@ const tileData = [
             `Deze bot wordt al iets meer dan een jaar gebruikt in een server van meer dan 3300 leden. Net zoals de KGB Bot heb ik deze bot ook recent herschreven voor betere stabiliteit, 
             automatisch herstarten en monitoring.`,
         ],
-        technologies: ["Node.js, Discord.js"],
+        technologies: [
+            "Node.js: Axios, Chalk, Discord.js, Moment, PM2",
+            "Javascript",
+        ],
         links: [
             {
-                url: "https://discord.gg/XA8MZkV",
+                url: "https://discord.gg/B3vdnpd",
                 text: "Join de test server met de bot",
             },
             {
@@ -185,10 +223,10 @@ const tileData = [
             waarbij de leerlingen dit zelf kunnen doen.`,
             `Deze bot zal binnenkort gebruikt worden als de server officiëel uitgebreid wordt naar de verschillende studierichtingen.`,
         ],
-        technologies: ["Node.js, Discord.js"],
+        technologies: ["Node.js: Chalk, Discord.js, PM2", "Javascript"],
         links: [
             {
-                url: "https://discord.gg/XA8MZkV",
+                url: "https://discord.gg/B3vdnpd",
                 text: "Join de test server met de bot",
             },
         ],
