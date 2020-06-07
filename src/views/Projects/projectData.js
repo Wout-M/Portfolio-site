@@ -49,8 +49,8 @@ const tileData = [
         categories: [categories.AI],
         text: [
             `Tijdens mijn Erasmussemester in Noorwegen heb ik het vak "DAT158 Machine Learning and Advanced Algorithms" gehad, waarbij ik kennismaakte 
-            met de basis van Machine Learning en de theorie achter bekende algoritmes. Een van de opdrachten van het Machine Learning gedeelte kregen 
-            was om onze opgedane Machine Learning kennis toe te passen op een volledig zelf gekozen dataset`,
+            met de basis van Machine Learning en de theorie achter bekende algoritmes. Een van de opdrachten van het Machine Learning gedeelte was om onze 
+            opgedane Machine Learning kennis toe te passen op een volledig zelf gekozen dataset`,
             `Hiervoor hebben ik en enkele medestudenten met de "Spotify Tracks Database" gewerkt om de valence, of positiviteit, van een liedje voorspellen. 
             Daarbij hebben we de dataset verkend, geprocessed, alles in een pipeline gestoken, verschillende modellen en combinaties van modellen getest en ten 
             slotte deze allemaal vergeleken. Ik heb hierbij de volledige opdracht gemaakt omdat de kennis van mijn medestudenten van het onderwerp wat achter liep. 
@@ -77,7 +77,7 @@ const tileData = [
         text: [
             `In 2018 heb ik deelgenomen aan de Nacht van de Ondernemende student, dat door de studenten van Eventmanagement georganiseerd werd. Hierbij 
             lostte ik met een groep van Belgische en internationale studenten een business case op.`,
-            `De business case was opgesteld door de directie van het schoenenbedrijf Torf. Torfs wou proberen om jongeren sterker in hun schoenen te laten 
+            `De business case was opgesteld door de directie van het schoenenbedrijf Torfs. Torfs wou proberen om jongeren sterker in hun schoenen te laten 
             staan. Samen met mijn medestudenten kwamen we op het idee om de Torfs Games te organiseren, een soort van Highland Games dat door Torfs georganiseerd 
             werd in de laatste jaren van middelbare scholen.`,
             `In de onderstaande links kan u ons uitgewerkte business model vinden`,
@@ -99,7 +99,7 @@ const tileData = [
         title: "Face snake",
         categories: [categories.AI, categories.web],
         text: [
-            `Om mijn kennis en de limieten van React en AI te testen wou ik proberen om de twee te combineren. Uit deze mix is "Face snake" gekomen,
+            `Om mijn kennis en de limieten van React en AI te testen heb ik geprobeerd om de twee te combineren. Uit deze mix is "Face snake" gekomen,
             waarbij je het bekende spel Snake kan besturen door met je gezicht voor de camera te bewegen.`,
             `Voor de locatie van je gezicht te berekenen wordt gebruik gemaakt van het TensorFlow.js model MediaPipe Facemesh. Deze locatie wordt 
             asynchroon berekend en doorgegeven aan de applicatie, waarbij deze de richting kan berekenen dat de slang naartoe gaat. Door de vaste 
@@ -151,7 +151,7 @@ const tileData = [
         categories: [categories.discordbot],
         text: [
             `Discord is een sociaal media platform waarmee mensen van over heel de wereld met elkaar kunnen chatten, bellen of videobellen. 
-            Hierbij kan je dat rechtstreeks met elkaar doen, maar kan je ook in een server gaan. Zo'n servers zijn eigenlijk gewoon grote 
+            Hierbij kan je dat rechtstreeks met elkaar doen, maar kan je ook in een server gaan. Zo'n servers zijn eigenlijk grote 
             groepchats waarin je met enkele tientallen tot enkele tienduizenden mensen in kan zitten.`,
             `Bij zo'n grote servers zijn er natuurlijk ook regels die dienen opgevolgd te worden, wat helaas niet altijd gebeurd. Tijdens deze
             overtredingen werd dan meestal ook stiekem het bewijs verwijdert waardoor er niets aan de hand leek te zijn. Om dit probleem op te lossen 
@@ -185,13 +185,13 @@ const tileData = [
         categories: [categories.discordbot],
         text: [
             `Discord is een sociaal media platform waarmee mensen van over heel de wereld met elkaar kunnen chatten, bellen of videobellen. 
-            Hierbij kan je dat rechtstreeks met elkaar doen, maar kan je ook in een server gaan. Zo'n servers zijn eigenlijk gewoon grote 
+            Hierbij kan je dat rechtstreeks met elkaar doen, maar kan je ook in een server gaan. Zo'n servers zijn eigenlijk grote 
             groepchats waarin je met enkele tientallen tot enkele tienduizenden mensen in kan zitten.`,
             `Eén van deze servers is gemaakt voor een bekende YouTuber en heeft als thema Harry Potter. Om de beleving compleet te maken heeft deze server ook chatkanalen voor 
             elk van de 4 afdelingen van de school en chatkanaal voor elk schooljaar. Hiervoor heb ik een bot geschreven die automatisch een jaar role geeft als iemand nieuw in de server komt. 
-            Hiermee kunnen ze in het chatkanaal van hun schooljaar terecht Ook kunnen deze nieuwe leden een huis role kiezen uit een keuzemenu van de bot. Daarmee krijgen ze dan ook toegang tot 
+            Hiermee kunnen ze in het chatkanaal van hun schooljaar terecht. Ook kunnen deze nieuwe leden een huis role kiezen uit een keuzemenu van de bot. Daarmee krijgen ze dan ook toegang tot 
             het chatkanaal van hun gekozen afdeling. Daarbuiten heeft het ook verschillende admin functies en ook leukere functies voor de leden, zoals bijvoorbeeld quizzen, gifs plaatsen, ... .`,
-            `Deze bot wordt al iets meer dan een jaar gebruikt in een server van meer dan 3300 leden. Net zoals de KGB Bot heb ik deze bot ook recent herschreven voor betere stabiliteit, 
+            `Deze bot wordt al iets meer dan een jaar gebruikt in een server met meer dan 3300 leden. Net zoals de KGB Bot heb ik deze bot ook recent herschreven voor betere stabiliteit, 
             automatisch herstarten en monitoring.`,
         ],
         technologies: [
@@ -215,7 +215,7 @@ const tileData = [
         categories: [categories.discordbot],
         text: [
             `Discord is een sociaal media platform waarmee mensen van over heel de wereld met elkaar kunnen chatten, bellen of videobellen. 
-            Hierbij kan je dat rechtstreeks met elkaar doen, maar kan je ook in een server gaan. Zo'n servers zijn eigenlijk gewoon grote 
+            Hierbij kan je dat rechtstreeks met elkaar doen, maar kan je ook in een server gaan. Zo'n servers zijn eigenlijk grote 
             groepchats waarin je met enkele tientallen tot enkele tienduizenden mensen in kan zitten.`,
             `Eén van deze servers is gemaakt voor en door de studenten van het exacte wetenschappen departement van de universiteit van Bern. Hierin kunnen de leerlingen van verschillende
             studierichtingen (zoals bijvoorbeeld fysica, wiskunde of informatica) terecht voor vragen in verband met de leerstof. Om te vermijden dat studenten meldingen krijgen van de chatkanalen 
