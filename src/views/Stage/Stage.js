@@ -6,6 +6,10 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 
 import classes from "./Stage.module.css";
+import pva from "../../assets/documents/PVA.pdf";
+import research from "../../assets/documents/Research_stage.pdf";
+import werking from "../../assets/documents/Werking.pdf";
+import reflectie from "../../assets/documents/Reflectie_stage.pdf";
 
 const Stage = () => {
     return (
@@ -51,26 +55,27 @@ const Stage = () => {
                 <Typography>
                     Hieronder vindt u de documenten die ik in het kader van mijn
                     stage heb gemaakt en die dieper ingaan op bepaalde aspecten
-                    hiervan:
+                    hiervan, maar door een Non-Disclosure Agreement kan ik
+                    helaas geen code of concrete voorbeelden gebruiken.
                 </Typography>
                 <List>
                     <ListItem>
-                        <Link href={""} download>
+                        <Link href={pva} target="_blank">
                             Plan van aanpak
                         </Link>
                     </ListItem>
                     <ListItem>
-                        <Link href={""} download>
-                            Research
+                        <Link href={research} target="_blank">
+                            Realistatie 1: Research
                         </Link>
                     </ListItem>
                     <ListItem>
-                        <Link href={""} download>
-                            Werking
+                        <Link href={werking} target="_blank">
+                            Realisatie 2: Werking
                         </Link>
                     </ListItem>
                     <ListItem>
-                        <Link href={""} download>
+                        <Link href={reflectie} target="_blank">
                             Reflectie
                         </Link>
                     </ListItem>

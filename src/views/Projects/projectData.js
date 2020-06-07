@@ -161,8 +161,8 @@ const tileData = [
             voorkwam en eventuele bijlagen. Om het niet alleen een saaie log bot te laten zijn, heb ik het een bijpassende naam gegeven en er ook enkele leuke functies 
             in verwerkt zoals bijvoorbeeld het kunnen antwoorden op ja/nee vragen, quizzen mee spelen of sinds kort ook meldingen geven als iemand jarig is.`,
             `Deze bot wordt ondertussen al meer dan twee jaar gebruikt in een server van ongeveer 300 - 400 mensen en wordt om de zoveel tijd geüpdate met 
-            nieuwe functies. Sinds kort heb de bot ook helemaal van scratch opnieuw gemaakt met al de extra kennis die ik de laatste 2 jaar heb opgedaan, waardoor het 
-            veel stabieler is, automatische herstarting bij eventuele crashes en ook gemonitord kan worden vanuit een dashboard.`,
+            nieuwe functies. Sinds kort heb de bot ook helemaal van scratch opnieuw gemaakt met al de extra kennis die ik de laatste 2 jaar heb opgedaan. Hierdoor is de bot 
+            veel stabieler, start deze automatisch opnieuw op bij eventuele crashes en wordt deze ook gemonitord vanuit een dashboard.`,
         ],
         technologies: [
             "Node.js: Axios, Chalk, Discord.js, Moment, PM2",
@@ -187,10 +187,10 @@ const tileData = [
             `Discord is een sociaal media platform waarmee mensen van over heel de wereld met elkaar kunnen chatten, bellen of videobellen. 
             Hierbij kan je dat rechtstreeks met elkaar doen, maar kan je ook in een server gaan. Zo'n servers zijn eigenlijk gewoon grote 
             groepchats waarin je met enkele tientallen tot enkele tienduizenden mensen in kan zitten.`,
-            `Eén van deze servers is gemaakt voor een bekende YouTuber en heeft als thema Harry Potter. Om de beleving compleet te maken heeft deze server ook de 4 afdelingen van de school 
-            en "kamers" voor elk schooljaar. Hiervoor heb ik een bot geschreven die automatisch een jaar role geeft als iemand nieuw in de server komt. 
-            Ook kunnen deze nieuwe leden een huis role kiezen die de bot aan hen geeft. Daarbuiten heeft het ook verschillende admin functies en ook leukere functies voor de leden, zoals 
-            bijvoorbeeld quizzen, gifs plaatsen, ... .`,
+            `Eén van deze servers is gemaakt voor een bekende YouTuber en heeft als thema Harry Potter. Om de beleving compleet te maken heeft deze server ook chatkanalen voor 
+            elk van de 4 afdelingen van de school en chatkanaal voor elk schooljaar. Hiervoor heb ik een bot geschreven die automatisch een jaar role geeft als iemand nieuw in de server komt. 
+            Hiermee kunnen ze in het chatkanaal van hun schooljaar terecht Ook kunnen deze nieuwe leden een huis role kiezen uit een keuzemenu van de bot. Daarmee krijgen ze dan ook toegang tot 
+            het chatkanaal van hun gekozen afdeling. Daarbuiten heeft het ook verschillende admin functies en ook leukere functies voor de leden, zoals bijvoorbeeld quizzen, gifs plaatsen, ... .`,
             `Deze bot wordt al iets meer dan een jaar gebruikt in een server van meer dan 3300 leden. Net zoals de KGB Bot heb ik deze bot ook recent herschreven voor betere stabiliteit, 
             automatisch herstarten en monitoring.`,
         ],
@@ -218,9 +218,10 @@ const tileData = [
             Hierbij kan je dat rechtstreeks met elkaar doen, maar kan je ook in een server gaan. Zo'n servers zijn eigenlijk gewoon grote 
             groepchats waarin je met enkele tientallen tot enkele tienduizenden mensen in kan zitten.`,
             `Eén van deze servers is gemaakt voor en door de studenten van het exacte wetenschappen departement van de universiteit van Bern. Hierin kunnen de leerlingen van verschillende
-            studierichtingen (zoals bijvoorbeeld fysica, wiskunde of informatica) terecht voor vragen in verband met de leerstof. Om te vermijden dat studenten meldingen krijgen van elke 
-            studierichting, worden ze verdeelt met roles voor de richtingen waar zij in zitten. Dit werd tot kort manueel gedaan, maar op vraag van een van de admins heb ik een bot geschreven 
-            waarbij de leerlingen dit zelf kunnen doen.`,
+            studierichtingen (zoals bijvoorbeeld fysica, wiskunde of informatica) terecht voor vragen in verband met de leerstof. Om te vermijden dat studenten meldingen krijgen van de chatkanalen 
+            van elke studierichting krijgen ze roles voor de richtingen waar zij in zitten om hen enkel toegang te geven tot de chatkanalen van deze richting. Dit werd tot kort manueel gedaan, maar 
+            op vraag van een van de admins heb ik een bot geschreven waarbij de leerlingen dit zelf kunnen doen met een keuzemenu van de bot. Ook kan deze bot, net zoals de KGB Bot, de aangepaste 
+            of verwijderde berichten loggen. Net zoals al de andere bots heeft deze ook een dashboard.`,
             `Deze bot zal binnenkort gebruikt worden als de server officiëel uitgebreid wordt naar de verschillende studierichtingen.`,
         ],
         technologies: ["Node.js: Chalk, Discord.js, PM2", "Javascript"],
