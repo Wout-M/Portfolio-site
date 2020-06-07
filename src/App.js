@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Main from "./views/Main/Main";
 import HeroImage from "./views/HeroImage/HeroImage";
+import Footer from "./views/Footer/Footer";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 ]}
             />
             <Main />
+            <Footer/>
         </Fragment>
     );
 }

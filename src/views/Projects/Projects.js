@@ -14,6 +14,7 @@ const Projects = () => {
         category: "",
         text: [],
         links: [],
+        technologies: [],
         image: "",
     });
 
@@ -21,49 +22,43 @@ const Projects = () => {
         setOpenDialog(false);
     };
 
-    const openHandler = (title, text, image, links, category) => {
+    const openHandler = ({
+        title,
+        categories,
+        text,
+        links,
+        technologies,
+        img,
+    }) => {
         setOpenDialog(true);
         setContent({
             title: title,
-            category: category,
+            categories: categories,
             text: text,
             links: links,
-            image: image,
+            technologies: technologies,
+            image: img,
         });
     };
 
     return (
         <div className={classes.root}>
             <GridList cellHeight={180} className={classes.gridList}>
-                {projectData.map((tile) => (
-                    <GridListTile
-                        key={tile.title}
-                        classes={{ tile: classes.tile }}
-                        onClick={() =>
-                            openHandler(
-                                tile.title,
-                                tile.text,
-                                Object.values(tile.img)[0],
-                                tile.links,
-                                tile.category
-                            )
-                        }
-                    >
-                        <img
-                            src={Object.values(tile.img)[0]}
-                            alt={tile.title}
-                        />
-                        <GridListTileBar
-                            style={{
-                                background:
-                                    "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, " +
-                                    "rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
-                            }}
-                            titlePosition="top"
-                            title={tile.title}
-                        />
-                    </GridListTile>
-                ))}
+                {projectData
+                    .sort((a, b) => a.title.localeCompare(b.title))
+                    .map((project) => (
+                        <GridListTile
+                            key={project.title}
+                            classes={{ tile: classes.tile }}
+                            onClick={() => openHandler(project)}
+                        >
+                            <img src={project.img} alt={project.title} />
+                            <GridListTileBar
+                                titlePosition="bottom"
+                                title={project.title}
+                            />
+                        </GridListTile>
+                    ))}
             </GridList>
             <ProjectDialog
                 open={openDialog}

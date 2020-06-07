@@ -117,7 +117,7 @@ const Main = () => {
                         </Grid>
                     </Grid>
 
-                    <Grid item className={classes.text} xs="12" sm="8">
+                    <Grid item className={classes.text} xs={12} sm={8}>
                         <Fade when={fade} duration={duration}>
                             {content}
                         </Fade>

@@ -26,14 +26,21 @@ const styles = (theme) => ({
 });
 
 const DialogTitle = withStyles(styles)((props) => {
-    const { children, classes, onClose, category, ...other } = props;
+    const { children, classes, onClose, categories, ...other } = props;
 
     return (
         <MuiDialogTitle disableTypography className={classes.root} {...other}>
             <Typography gutterBottom variant="h6">
                 {children}
             </Typography>
-            <Chip label={category} />
+            {categories.map((category, i) => (
+                <Chip
+                    label={category}
+                    key={i}
+                    style={{ marginRight: "10px" }}
+                />
+            ))}
+
             {onClose ? (
                 <IconButton
                     aria-label="close"
@@ -64,7 +71,7 @@ const ProjectDialog = (props) => {
                 <DialogTitle
                     id="customized-dialog-title"
                     onClose={props.closing}
-                    category={props.content.category}
+                    categories={props.content.categories}
                 >
                     {props.content.title}
                 </DialogTitle>
@@ -82,21 +89,45 @@ const ProjectDialog = (props) => {
                             className={classes.image}
                         />
                     </Grid>
-                    {props.content.text.map((paragraph) => (
-                        <Fragment>
+
+                    {props.content.text.map((paragraph, i) => (
+                        <Fragment key={i}>
                             <Typography key={paragraph}>{paragraph}</Typography>
                             <br />
                         </Fragment>
                     ))}
-                    <br />
-                    {props.content.links.map((link) => (
-                        <Typography gutterBottom key={link.text}>
-                            <Link href={link.url} target="_blank">
-                                {link.text}
-                            </Link>
-                        </Typography>
-                    ))}
-                    <br />
+                    {props.content.technologies ? (
+                        <Fragment>
+                            <Typography variant="h6" gutterBottom>
+                                Gebruikte technologieën
+                            </Typography>
+                            <ul className={classes.list}>
+                                {props.content.technologies.map((tech, i) => (
+                                    <li key={i}>
+                                        <Typography gutterBottom>
+                                            {tech}
+                                        </Typography>
+                                    </li>
+                                ))}
+                            </ul>
+                        </Fragment>
+                    ) : null}
+
+                    <Typography variant="h6" gutterBottom>
+                        Links
+                    </Typography>
+
+                    <ul className={classes.list}>
+                        {props.content.links.map((link, i) => (
+                            <li key={i}>
+                                <Typography gutterBottom>
+                                    <Link href={link.url} target="_blank">
+                                        {link.text}
+                                    </Link>
+                                </Typography>
+                            </li>
+                        ))}
+                    </ul>
                 </DialogContent>
             </Dialog>
         </div>
