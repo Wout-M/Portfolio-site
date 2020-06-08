@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { useState } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Dialog from "@material-ui/core/Dialog";
 import MuiDialogTitle from "@material-ui/core/DialogTitle";
@@ -6,13 +6,17 @@ import MuiDialogContent from "@material-ui/core/DialogContent";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
 import Grid from "@material-ui/core/Grid";
-import Chip from "@material-ui/core/Chip";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 
-import classes from "./ProjectDialog.module.css";
+import classes from "./PictureDialog.module.css";
+import norway from "../../assets/images/norway.jpg";
+import norway2 from "../../assets/images/norway2.jpg";
+import norway3 from "../../assets/images/norway3.jpg";
+import norway4 from "../../assets/images/norway4.jpg";
+
+const pictures = [norway, norway2, norway3, norway4]
 
 const styles = (theme) => ({
     root: {
@@ -35,14 +39,6 @@ const DialogTitle = withStyles(styles)((props) => {
             <Typography gutterBottom variant="h6">
                 {children}
             </Typography>
-            {categories.map((category, i) => (
-                <Chip
-                    label={category}
-                    key={i}
-                    style={{ marginRight: "10px" }}
-                />
-            ))}
-
             {onClose ? (
                 <IconButton
                     aria-label="close"
@@ -62,22 +58,19 @@ const DialogContent = withStyles((theme) => ({
     },
 }))(MuiDialogContent);
 
-const ProjectDialog = (props) => {
+const PictureDialog = (props) => {
     const [imageIndex, setImageIndex] = useState(0);
 
     const previousContentHandler = () => {
         imageIndex === 0
-            ? setImageIndex(props.content.images.length - 1)
-            : setImageIndex((prevIndex) => (prevIndex - 1) % props.content.images.length);
+            ? setImageIndex(pictures.length - 1)
+            : setImageIndex((prevIndex) => (prevIndex - 1) % pictures.length);
     };
 
     const nextContentHandler = () => {
-        setImageIndex((prevIndex) => (prevIndex + 1) % props.content.images.length);
+        setImageIndex((prevIndex) => (prevIndex + 1) % pictures.length);
     };
 
-    useEffect(()=> {
-        setImageIndex(0)
-    },[props])
     return (
         <div>
             <Dialog
@@ -88,9 +81,8 @@ const ProjectDialog = (props) => {
                 <DialogTitle
                     id="customized-dialog-title"
                     onClose={props.closing}
-                    categories={props.content.categories}
                 >
-                    {props.content.title}
+                    {"Noorwegen"}
                 </DialogTitle>
 
                 <DialogContent dividers>
@@ -102,7 +94,6 @@ const ProjectDialog = (props) => {
                         className={classes.root}
                     >
                         <Grid item xs={1}>
-                            {props.content.images.length > 1 ? (
                                 <IconButton
                                     color="primary"
                                     variant="contained"
@@ -113,7 +104,6 @@ const ProjectDialog = (props) => {
                                         className={classes.button}
                                     />
                                 </IconButton>
-                            ) : null}
                         </Grid>
                         <Grid item xs={10}>
                             <Grid
@@ -123,14 +113,13 @@ const ProjectDialog = (props) => {
                                 direction="column"
                             >
                                 <img
-                                    src={props.content.images[imageIndex]}
-                                    alt={props.content.title}
+                                    src={pictures[imageIndex]}
+                                    alt={"Norway"}
                                     className={classes.image}
                                 />
                             </Grid>
                         </Grid>
                         <Grid item xs={1}>
-                            {props.content.images.length > 1 ? (
                                 <IconButton
                                     color="primary"
                                     variant="contained"
@@ -141,52 +130,12 @@ const ProjectDialog = (props) => {
                                         className={classes.button}
                                     />
                                 </IconButton>
-                            ) : null}
                         </Grid>
                     </Grid>
-
-                    {props.content.text.map((paragraph, i) => (
-                        <Fragment key={i}>
-                            <Typography key={paragraph}>{paragraph}</Typography>
-                            <br />
-                        </Fragment>
-                    ))}
-                    {props.content.technologies ? (
-                        <Fragment>
-                            <Typography variant="h6" gutterBottom>
-                                Gebruikte technologieën
-                            </Typography>
-                            <ul className={classes.list}>
-                                {props.content.technologies.map((tech, i) => (
-                                    <li key={i}>
-                                        <Typography gutterBottom>
-                                            {tech}
-                                        </Typography>
-                                    </li>
-                                ))}
-                            </ul>
-                        </Fragment>
-                    ) : null}
-
-                    <Typography variant="h6" gutterBottom>
-                        Links
-                    </Typography>
-
-                    <ul className={classes.list}>
-                        {props.content.links.map((link, i) => (
-                            <li key={i}>
-                                <Typography gutterBottom>
-                                    <Link href={link.url} target="_blank">
-                                        {link.text}
-                                    </Link>
-                                </Typography>
-                            </li>
-                        ))}
-                    </ul>
                 </DialogContent>
             </Dialog>
         </div>
     );
 };
 
-export default ProjectDialog;
+export default PictureDialog;

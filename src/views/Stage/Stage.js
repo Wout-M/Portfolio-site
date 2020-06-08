@@ -15,6 +15,9 @@ const Stage = () => {
     return (
         <Fragment>
             <Grid item>
+                <Typography variant="h5" gutterBottom>
+                    Objectieve puntentelling in sport
+                </Typography>
                 <Typography className={classes.text}>
                     Tijdens mijn Erasmussemester heb ik kennisgemaakt met AI en
                     Machine Learning en was ik er direct zeer geïnteresseerd in.
@@ -32,8 +35,8 @@ const Stage = () => {
                 </Typography>
                 <Typography className={classes.text}>
                     Eén van deze onderzoeken is mijn stage, waarbij ik
-                    onderzocht hoe je een objectieve jury kan maken voor een
-                    specifieke sport door middel van AI. Hierbij heb ik eerst
+                    onderzocht hoe je het jureren van een specifieke sport kan
+                    objectiveren door middel van AI. Hierbij heb ik eerst
                     onderzoek gedaan naar de verschillende Pose Estimation
                     modellen en de voor- en nadelen hiervan om de sporters in
                     beeld te kunnen brengen voor verdere analyse. DeepLabCut
@@ -58,7 +61,7 @@ const Stage = () => {
                     hiervan, maar door een Non-Disclosure Agreement kan ik
                     helaas geen code of concrete voorbeelden gebruiken.
                 </Typography>
-                <List>
+                <List style={{ marginLeft: "-16px" }}>
                     <ListItem>
                         <Link href={pva} target="_blank">
                             Plan van aanpak

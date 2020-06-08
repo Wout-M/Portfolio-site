@@ -1,10 +1,23 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
 
 import classes from "./About.module.css";
+import PictureDialog from "../PictureDialog/PictureDialog";
 
 const About = () => {
+    const [open, setOpen] = useState(false);
+
+    const openDialogHandler = (event) => {
+        event.preventDefault();
+        setOpen(true);
+    };
+
+    const closeDialogHandler = () => {
+        setOpen(false);
+    };
+
     return (
         <Fragment>
             <Grid item>
@@ -17,21 +30,30 @@ const About = () => {
                     Van kleins af aan was ik al geïnteresseerd in alles wat met
                     technologie te maken heeft. Daarbij ging ik vaak zelf op
                     ontdekking om nieuwe dingen te leren, zoals bijvoorbeeld
-                    knutselen met een Arduino of programma’s maken in Java.
-                    Hierdoor kwam ik ook in contact met CoderDojo, waar ik
-                    enkele jaren les heb gevolgd en ook even als begeleider heb
-                    gewerkt. Uiteindelijk kwam ik terecht aan de IT Factory in
-                    Geel waar ik verder mijn interesses kon ontwikkelen in de
-                    verschillende lessen en groepsprojecten.
+                    programma’s maken in Java voor het spel Minecraft of
+                    knutselen met een Arduino. Hierdoor kwam ik ook in contact
+                    met CoderDojo, waar ik enkele jaren les heb gevolgd en ook
+                    even als begeleider heb gewerkt. Uiteindelijk kwam ik
+                    terecht aan de IT Factory in Geel waar ik verder mijn
+                    interesses kon ontwikkelen in de verschillende lessen en
+                    groepsprojecten.
+                </Typography>
+                <Typography className={classes.text}>
+                    In het eerste semester van dit laatste jaar heb ik ook aan
+                    de Western Norway University of Applied Sciences gestudeerd.
+                    Hier heb ik IT ook van een andere hoek leren bekijken, veel
+                    nieuwe mensen leren kennen en natuurlijk ook veel{" "}
+                    <Link href="#" onClick={(e) => openDialogHandler(e)}>
+                        foto's
+                    </Link>{" "}
+                    getrokken.
                 </Typography>
                 <Typography>
-                    Na 3 jaar les te volgen aan de IT Factory, waarvan ook een
-                    semester in Noorwegen, is het tijd om deze kennis en
-                    interesse toe te passen in een echte job. Op deze site vindt
-                    u mijn belangrijkste mijlpalen die ik bereikt heb tijdens
-                    mijn studies.
+                    Buiten mijn studies doe ik ook nog aan muurklimmen en speel
+                    ik ook soms wat piano.
                 </Typography>
             </Grid>
+            <PictureDialog open={open} closing={closeDialogHandler} />
         </Fragment>
     );
 };

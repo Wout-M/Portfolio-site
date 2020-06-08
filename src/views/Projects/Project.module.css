@@ -12,3 +12,9 @@
 .tile:hover {
     cursor: pointer;
 }
+
+.text {
+    text-align: center;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}

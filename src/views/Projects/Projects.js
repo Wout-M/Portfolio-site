@@ -3,6 +3,7 @@ import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import ProjectDialog from "./ProjectDialog/ProjectDialog";
+import Typography from "@material-ui/core/Typography";
 
 import classes from "./Project.module.css";
 import projectData from "./projectData";
@@ -15,7 +16,7 @@ const Projects = () => {
         text: [],
         links: [],
         technologies: [],
-        image: "",
+        images: [],
     });
 
     const closeHandler = () => {
@@ -28,7 +29,7 @@ const Projects = () => {
         text,
         links,
         technologies,
-        img,
+        imgs,
     }) => {
         setOpenDialog(true);
         setContent({
@@ -37,29 +38,40 @@ const Projects = () => {
             text: text,
             links: links,
             technologies: technologies,
-            image: img,
+            images: imgs,
         });
+    };
+
+    const projectMapper = (projects) => {
+        return (
+            <GridList cellHeight={180} className={classes.gridList}>
+                {projects.map((project) => (
+                    <GridListTile
+                        key={project.title}
+                        classes={{ tile: classes.tile }}
+                        onClick={() => openHandler(project)}
+                    >
+                        <img src={project.imgs[0]} alt={project.title} />
+                        <GridListTileBar
+                            titlePosition="bottom"
+                            title={project.title}
+                        />
+                    </GridListTile>
+                ))}
+            </GridList>
+        );
     };
 
     return (
         <div className={classes.root}>
-            <GridList cellHeight={180} className={classes.gridList}>
-                {projectData
-                    .sort((a, b) => a.title.localeCompare(b.title))
-                    .map((project) => (
-                        <GridListTile
-                            key={project.title}
-                            classes={{ tile: classes.tile }}
-                            onClick={() => openHandler(project)}
-                        >
-                            <img src={project.img} alt={project.title} />
-                            <GridListTileBar
-                                titlePosition="bottom"
-                                title={project.title}
-                            />
-                        </GridListTile>
-                    ))}
-            </GridList>
+            <Typography className={classes.text} variant="h5">
+                Eigen projecten
+            </Typography>
+            {projectMapper(projectData.filter((project) => !project.school))}
+            <Typography className={classes.text} variant="h5">
+                Schoolprojecten
+            </Typography>
+            {projectMapper(projectData.filter((project) => project.school))}
             <ProjectDialog
                 open={openDialog}
                 closing={closeHandler}

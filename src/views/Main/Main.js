@@ -5,6 +5,7 @@ import Avatar from "@material-ui/core/Avatar";
 import Fade from "react-reveal/Fade";
 
 import Title from "../../components/Title/Title";
+import Welcome from "../Welcome/Welcome";
 import About from "../About/About";
 import Stage from "../Stage/Stage";
 import Projects from "../Projects/Projects";
@@ -31,8 +32,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Main = () => {
-    const [content, setContent] = useState(<About />);
-    const [showAbout, setShowAbout] = useState(true);
+    const [content, setContent] = useState(<Welcome switchTab={(tab) => changeContent(tab)}/>);
+    const [showWelcome, setShowWelcome] = useState(true);
+    const [showAbout, setShowAbout] = useState(false);
     const [showStage, setShowStage] = useState(false);
     const [showProjects, setShowProjects] = useState(false);
     const [fade, setFade] = useState(true);
@@ -48,21 +50,29 @@ const Main = () => {
         let timer = setTimeout(setFade(true), duration);
 
         switch (content.type.name) {
+            case Welcome.name:
+                setShowAbout(false);
+                setShowStage(false);
+                setShowProjects(false);
+                setShowWelcome(true);
+                break;
             case About.name:
                 setShowAbout(true);
                 setShowStage(false);
                 setShowProjects(false);
-
+                setShowWelcome(false);
                 break;
             case Stage.name:
                 setShowAbout(false);
                 setShowStage(true);
                 setShowProjects(false);
+                setShowWelcome(false);
                 break;
             case Projects.name:
                 setShowAbout(false);
                 setShowStage(false);
                 setShowProjects(true);
+                setShowWelcome(false);
                 break;
 
             default:
@@ -96,6 +106,12 @@ const Main = () => {
                             alignItems="flex-start"
                             direction="column"
                         >
+                            <Title
+                                line={showWelcome}
+                                clicked={() => changeContent(<Welcome switchTab={(tab) => changeContent(tab)} />)}
+                            >
+                                Welkom
+                            </Title>
                             <Title
                                 line={showAbout}
                                 clicked={() => changeContent(<About />)}

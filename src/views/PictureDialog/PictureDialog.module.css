@@ -2,17 +2,8 @@
     max-width: 100%;
     margin: auto;
     border-radius: 16px;
-    max-height: 320px;
-}
-
-.list {
-    margin-left: -16px;
 }
 
 .button {
     color: #2b106a;
-}
-
-.root {
-    margin-bottom: 16px;
 }
