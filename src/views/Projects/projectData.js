@@ -69,8 +69,7 @@ const tileData = [
             opgedane Machine Learning kennis toe te passen op een volledig zelf gekozen dataset`,
             `Hiervoor hebben ik en enkele medestudenten met de "Spotify Tracks Database" gewerkt om de valence, of positiviteit, van een liedje voorspellen. 
             Daarbij hebben we de dataset verkend, geprocessed, alles in een pipeline gestoken, verschillende modellen en combinaties van modellen getest en ten 
-            slotte deze allemaal vergeleken. Ik heb hierbij de volledige opdracht gemaakt omdat de kennis van mijn medestudenten van het onderwerp wat achter liep. 
-            Tijdens de ontwikkeling waren zij wel telkens aanwezig en heb ik ook alles wat ik gedaan heb uitgelegd zodat zij na de opdracht op hetzelfde niveau zaten.`,
+            slotte deze allemaal vergeleken. Ik had over deze opdracht de leiding en heb daarbij ook mijn medegroepsleden gecoacht tijdens de ontwikkeling hiervan`,
             `Met de onderstaande link kan je naar de Github repo gaan om te zien wat we allemaal toegepast hebben.`,
         ],
         technologies: [
