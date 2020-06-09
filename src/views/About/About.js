@@ -5,6 +5,7 @@ import Link from "@material-ui/core/Link";
 
 import classes from "./About.module.css";
 import PictureDialog from "../PictureDialog/PictureDialog";
+import cv from "../../assets/documents/Wout_Mergaerts_CV.pdf";
 
 const About = () => {
     const [open, setOpen] = useState(false);
@@ -48,9 +49,17 @@ const About = () => {
                     </Link>{" "}
                     getrokken.
                 </Typography>
-                <Typography>
+                <Typography className={classes.text}>
                     Buiten mijn studies doe ik ook nog aan muurklimmen en speel
                     ik ook soms wat piano.
+                </Typography>
+                <Typography>
+                    Indien u meer informatie wilt over mijn vaardigheden en
+                    werkervaring, kan u dat vinden in{" "}
+                    <Link href={cv} target="_blank">
+                        mijn CV
+                    </Link>
+                    .
                 </Typography>
             </Grid>
             <PictureDialog open={open} closing={closeDialogHandler} />

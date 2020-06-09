@@ -60,6 +60,7 @@ const Welcome = (props) => {
                     >
                         Realisaties
                     </Link>
+                    .
                 </Typography>
             </Grid>
         </Fragment>
