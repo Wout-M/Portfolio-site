@@ -2,14 +2,21 @@ import React, { Fragment, useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
+import { useTranslation, Trans } from "react-i18next";
 
 import classes from "./About.module.css";
 import PictureDialog from "../PictureDialog/PictureDialog";
 import cv from "../../assets/documents/Wout_Mergaerts_CV.pdf";
+import { Button } from "@material-ui/core";
 
 const About = () => {
     const [open, setOpen] = useState(false);
+    const { t, i18n } = useTranslation();
 
+    const changeLanguage = lng => {
+        i18n.changeLanguage(lng);
+      };
+    
     const openDialogHandler = (event) => {
         event.preventDefault();
         setOpen(true);
@@ -20,8 +27,18 @@ const About = () => {
     };
 
     return (
+        
         <Fragment>
             <Grid item>
+            <Typography className={classes.text}>
+            <Button onClick={() => changeLanguage("nl")}>
+            nl
+        </Button>
+        <Button onClick={() => changeLanguage("en")}>
+            en
+        </Button>
+                <Trans i18nKey="about"/>
+</Typography>
                 <Typography className={classes.text}>
                     Hallo, mijn naam is Wout Mergaerts en ik ben juist
                     afgestudeerd aan de IT Factory van Thomas More Kempen in
