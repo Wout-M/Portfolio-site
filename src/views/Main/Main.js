@@ -3,8 +3,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Avatar from "@material-ui/core/Avatar";
 import Fade from "react-reveal/Fade";
+import {useTranslation} from "react-i18next";
 
 import Title from "../../components/Title/Title";
+import LanguageChanger from "../../components/LanguageChanger/LanguageChanger"
 import About from "../About/About";
 import Stage from "../Stage/Stage";
 import Projects from "../Projects/Projects";
@@ -37,6 +39,7 @@ const Main = () => {
     const [showProjects, setShowProjects] = useState(false);
     const [fade, setFade] = useState(true);
     const classes = useStyles();
+    const {t} = useTranslation("titles");
     const duration = 800;
 
     const changeContent = (c) => {
@@ -92,27 +95,29 @@ const Main = () => {
                         <Grid
                             container
                             justify="flex-start"
-                            alignItems="flex-start"
+                            alignItems="flex-end"
                             direction="column"
                         >
                             <Title
                                 line={showAbout}
                                 clicked={() => changeContent(<About />)}
                             >
-                                Over mij
+                                {t('about')}
                             </Title>
                             <Title
                                 line={showStage}
                                 clicked={() => changeContent(<Stage />)}
                             >
-                                Stage
+                                {t('stage')}
                             </Title>
                             <Title
                                 line={showProjects}
                                 clicked={() => changeContent(<Projects />)}
                             >
-                                Realisaties
+                                {t('projects')}
                             </Title>
+                            <LanguageChanger/>
+
                         </Grid>
                     </Grid>
 
