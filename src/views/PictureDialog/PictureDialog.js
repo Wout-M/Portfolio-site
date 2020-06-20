@@ -16,7 +16,7 @@ import norway2 from "../../assets/images/norway2.jpg";
 import norway3 from "../../assets/images/norway3.jpg";
 import norway4 from "../../assets/images/norway4.jpg";
 
-const pictures = [norway, norway2, norway3, norway4]
+const pictures = [norway, norway2, norway3, norway4];
 
 const styles = (theme) => ({
     root: {
@@ -94,16 +94,16 @@ const PictureDialog = (props) => {
                         className={classes.root}
                     >
                         <Grid item xs={1}>
-                                <IconButton
-                                    color="primary"
-                                    variant="contained"
-                                    onClick={previousContentHandler}
-                                >
-                                    <ArrowBackIosIcon
-                                        fontSize="large"
-                                        className={classes.button}
-                                    />
-                                </IconButton>
+                            <IconButton
+                                color="primary"
+                                variant="contained"
+                                onClick={previousContentHandler}
+                            >
+                                <ArrowBackIosIcon
+                                    fontSize="large"
+                                    className={classes.button}
+                                />
+                            </IconButton>
                         </Grid>
                         <Grid item xs={10}>
                             <Grid
@@ -120,16 +120,16 @@ const PictureDialog = (props) => {
                             </Grid>
                         </Grid>
                         <Grid item xs={1}>
-                                <IconButton
-                                    color="primary"
-                                    variant="contained"
-                                    onClick={nextContentHandler}
-                                >
-                                    <ArrowForwardIosIcon
-                                        fontSize="large"
-                                        className={classes.button}
-                                    />
-                                </IconButton>
+                            <IconButton
+                                color="primary"
+                                variant="contained"
+                                onClick={nextContentHandler}
+                            >
+                                <ArrowForwardIosIcon
+                                    fontSize="large"
+                                    className={classes.button}
+                                />
+                            </IconButton>
                         </Grid>
                     </Grid>
                 </DialogContent>

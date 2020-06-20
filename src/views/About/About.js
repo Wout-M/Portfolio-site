@@ -23,9 +23,9 @@ const About = () => {
         <Fragment>
             <Grid item>
                 <Typography className={classes.text}>
-                    Hallo, mijn naam is Wout Mergaerts en momenteel ben ik een
-                    laatstejaarsstudent aan de IT Factory van Thomas More Kempen
-                    in Geel.
+                    Hallo, mijn naam is Wout Mergaerts en ik ben juist
+                    afgestudeerd aan de IT Factory van Thomas More Kempen in
+                    Geel.
                 </Typography>
                 <Typography className={classes.text}>
                     Van kleins af aan was ik al geïnteresseerd in alles wat met
@@ -58,8 +58,15 @@ const About = () => {
                     werkervaring, kan u dat vinden in{" "}
                     <Link href={cv} target="_blank">
                         mijn CV
-                    </Link>
-                    .
+                    </Link>{" "}
+                    of kan u mij altijd een{" "}
+                    <Link
+                        href="mailto:wout.mergaerts@telenet.be"
+                        target="_blank"
+                    >
+                        e-mail
+                    </Link>{" "}
+                    sturen.
                 </Typography>
             </Grid>
             <PictureDialog open={open} closing={closeDialogHandler} />
