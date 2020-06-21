@@ -9,6 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import { useTranslation } from "react-i18next";
 
 import classes from "./PictureDialog.module.css";
 import norway from "../../assets/images/norway.jpg";
@@ -60,6 +61,7 @@ const DialogContent = withStyles((theme) => ({
 
 const PictureDialog = (props) => {
     const [imageIndex, setImageIndex] = useState(0);
+    const { t } = useTranslation("pictureDialog");
 
     const previousContentHandler = () => {
         imageIndex === 0
@@ -82,7 +84,7 @@ const PictureDialog = (props) => {
                     id="customized-dialog-title"
                     onClose={props.closing}
                 >
-                    {"Noorwegen"}
+                    {t("norway")}
                 </DialogTitle>
 
                 <DialogContent dividers>

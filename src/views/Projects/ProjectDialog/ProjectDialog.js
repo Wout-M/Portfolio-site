@@ -11,6 +11,7 @@ import Grid from "@material-ui/core/Grid";
 import Chip from "@material-ui/core/Chip";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import { useTranslation } from "react-i18next";
 
 import classes from "./ProjectDialog.module.css";
 
@@ -64,20 +65,25 @@ const DialogContent = withStyles((theme) => ({
 
 const ProjectDialog = (props) => {
     const [imageIndex, setImageIndex] = useState(0);
+    const { t } = useTranslation("projectDialog");
 
     const previousContentHandler = () => {
         imageIndex === 0
             ? setImageIndex(props.content.images.length - 1)
-            : setImageIndex((prevIndex) => (prevIndex - 1) % props.content.images.length);
+            : setImageIndex(
+                  (prevIndex) => (prevIndex - 1) % props.content.images.length
+              );
     };
 
     const nextContentHandler = () => {
-        setImageIndex((prevIndex) => (prevIndex + 1) % props.content.images.length);
+        setImageIndex(
+            (prevIndex) => (prevIndex + 1) % props.content.images.length
+        );
     };
 
-    useEffect(()=> {
-        setImageIndex(0)
-    },[props])
+    useEffect(() => {
+        setImageIndex(0);
+    }, [props]);
     return (
         <div>
             <Dialog
@@ -154,7 +160,7 @@ const ProjectDialog = (props) => {
                     {props.content.technologies ? (
                         <Fragment>
                             <Typography variant="h6" gutterBottom>
-                                Gebruikte technologieën
+                                {t("technologies")}
                             </Typography>
                             <ul className={classes.list}>
                                 {props.content.technologies.map((tech, i) => (
