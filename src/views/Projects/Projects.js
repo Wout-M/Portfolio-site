@@ -6,7 +6,7 @@ import ProjectDialog from "./ProjectDialog/ProjectDialog";
 import Typography from "@material-ui/core/Typography";
 
 import classes from "./Project.module.css";
-import projectData from "./projectData";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
     const [openDialog, setOpenDialog] = useState(false);
@@ -18,6 +18,7 @@ const Projects = () => {
         technologies: [],
         images: [],
     });
+    const { t } = useTranslation("projects");
 
     const closeHandler = () => {
         setOpenDialog(false);
@@ -65,13 +66,21 @@ const Projects = () => {
     return (
         <div className={classes.root}>
             <Typography className={classes.text} variant="h5">
-                Eigen projecten
+                {t("mine")}
             </Typography>
-            {projectMapper(projectData.filter((project) => !project.school))}
+            {projectMapper(
+                t("projectData", { returnObjects: true }).filter(
+                    (project) => !project.school
+                )
+            )}
             <Typography className={classes.text} variant="h5">
-                Schoolprojecten
+                {t("school")}
             </Typography>
-            {projectMapper(projectData.filter((project) => project.school))}
+            {projectMapper(
+                t("projectData", { returnObjects: true }).filter(
+                    (project) => project.school
+                )
+            )}
             <ProjectDialog
                 open={openDialog}
                 closing={closeHandler}
