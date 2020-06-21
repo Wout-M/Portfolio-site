@@ -11,6 +11,7 @@ i18n.use(initReactI18next).init({
                 about: "About",
                 stage: "Internship",
                 projects: "Projects",
+                language: "Language: "
             },
             about: {
                 first: `Hi, I'm Wout Mergaerts and I just graduated from the IT Factory of 
@@ -82,6 +83,7 @@ i18n.use(initReactI18next).init({
                 about: "Over mij",
                 stage: "Stage",
                 projects: "Projecten",
+                language: "Taal: "
             },
             about: {
                 first: `Hallo, mijn naam is Wout Mergaerts en ik ben juist
@@ -162,11 +164,11 @@ i18n.use(initReactI18next).init({
         },
     },
     fallbackLng: "nl",
-    debug: true,
+    debug: false,
 
     // have a common namespace used around the full app
-    ns: ["about"],
-    defaultNS: "about",
+    ns: ["titles"],
+    defaultNS: "titles",
 
     keySeparator: false, // we use content as keys
 

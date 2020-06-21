@@ -1,19 +1,36 @@
-import React, { Fragment } from "react";
-import { Button } from "@material-ui/core";
+import React from "react";
+import Typography from "@material-ui/core/Typography";
+import Grid from "@material-ui/core/Grid";
 import { useTranslation } from "react-i18next";
+import NativeSelect from "@material-ui/core/NativeSelect";
+import FormControl from "@material-ui/core/FormControl";
 
 const LanguageChanger = () => {
-    const { i18n } = useTranslation();
+    const { t,i18n } = useTranslation();
 
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng);
+    const handleChange = (event) => {
+        i18n.changeLanguage(event.target.value);
     };
 
     return (
-        <Fragment>
-            <Button onClick={() => changeLanguage("nl")}>nl</Button>
-            <Button onClick={() => changeLanguage("en")}>en</Button>
-        </Fragment>
+        <FormControl>
+            <Grid
+                container
+                justify="center"
+                alignItems="center"
+                direction="row"
+            >
+                <Grid item>
+                    <Typography>{t("language")}</Typography>
+                </Grid>
+                <Grid item style={{ marginLeft: "4px" }}>
+                    <NativeSelect onChange={handleChange} name="age">
+                        <option value="nl">NL</option>
+                        <option value="en">EN</option>
+                    </NativeSelect>
+                </Grid>
+            </Grid>
+        </FormControl>
     );
 };
 
