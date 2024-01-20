@@ -1,0 +1,17 @@
+.projectlink{
+    color: var(--gray-12) !important;
+}
+
+.projectlink:hover{
+    color: var(--accent-a11) !important;
+}
+
+.arrow {
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    transition-duration: .3s;
+}
+
+.projectlink:hover > .arrow {
+     transform: rotate(405deg);
+}

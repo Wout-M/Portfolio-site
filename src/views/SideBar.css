@@ -1,0 +1,11 @@
+.link {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.250, 0.250, 0.750, 0.750);
+    transition-duration: .15s;
+}
+
+.active{
+    
+    font-weight: 800;
+    text-decoration: solid underline var(--accent-a11) 2px !important;
+}
