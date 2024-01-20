@@ -17,7 +17,7 @@ const links = [
     },
     {
         icon: <DocumentIcon />,
-        url: ""
+        url: "https://cv-woutmergaerts.netlify.app/"
     },
     {
         icon: <GithubIcon />,
@@ -53,8 +53,8 @@ const projects = [
         img: icon,
         description: "A CV made with React and Radix UI. This was definitely not necessary to make with React, but I learned a few things along the way and that's what it's all about.",
         technologies: ["React", "Javascript", "Radix", "Netlify"],
-        link: "",
-        github: ""
+        link: "https://cv-woutmergaerts.netlify.app/",
+        github: "https://github.com/Wout-M/Resume-Website"
     },
     {
         name: "KGB Bot",
