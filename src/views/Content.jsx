@@ -20,7 +20,8 @@ export default function Content() {
                     both desktop and web applications for managing construction companies. In my free time I create fun side projects like bots & games with .NET or React.
                 </Text>
                 <Text>
-                    When I'm not developing, I'm making custom mechanical keyboards or reviving vintage ones, tinkering around with my 3D-printer or going to the gym. 
+                    When I'm not developing, I'm making custom mechanical keyboards or <Link href="https://github.com/Wout-M/QMK-ADB-to-USB" target="_blank" className="url">reviving vintage ones</Link>, 
+                    tinkering around with my 3D-printer or going to the gym. 
                 </Text>
             </Flex>
             
