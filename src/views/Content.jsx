@@ -16,15 +16,14 @@ export default function Content() {
                     into volunteering for  <Link href="https://coderdojo.com" target="_blank" className="url">CoderDojo</Link> and helping other kids with starting their coding journey.
                 </Text>
                 <Text>
-                    Nowadays I'm working as a .NET developer for <Link href="https://build-software.eu" target="_blank" className="url">Build-Software</Link> making
+                    Nowadays I'm working as a .NET developer for <Link href="https://build-software.eu" target="_blank" className="url">Build-Software</Link>, making
                     both desktop and web applications for managing construction companies. In my free time I create fun side projects like bots & games with .NET or React.
                 </Text>
                 <Text>
-                    When I'm not developing, I'm making custom mechanical keyboards or <Link href="https://github.com/Wout-M/QMK-ADB-to-USB" target="_blank" className="url">reviving vintage ones</Link>, 
-                    tinkering around with my 3D-printer or going to the gym. 
+                    When I'm not developing, I'm making custom mechanical keyboards or <Link href="https://github.com/Wout-M/QMK-ADB-to-USB" target="_blank" className="url">reviving vintage ones</Link>,
+                    tinkering around with my 3D-printer or going to the gym.
                 </Text>
             </Flex>
-            
             <Flex direction="column" gap="5" className="Section" id="Projects">
                 {projects.map((project, index) => (
                     <Project key={index} project={project} />

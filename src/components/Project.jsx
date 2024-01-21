@@ -8,7 +8,7 @@ export default function Project({ project }) {
     let technologies = project.technologies.map((tech, index) => <Badge radius="full" key={index}>{tech}</Badge>);
 
     return (
-        <Flex className="project" gap="4" align="center" p="2" mx="4" width="100%">
+        <Flex className="project" direction={{ initial: "column-reverse", xs: "row" }} gap="4" align="center" p="2" mx="4">
             <img
                 src={project.img}
                 alt={project.img_alt}

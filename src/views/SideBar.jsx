@@ -35,13 +35,13 @@ export default function SideBar() {
     }, []);
 
     return (
-        <Flex direction="column" justify="between" py="6" height="100%">
-            <Flex direction="column" justify="center" >
-                <Heading size="9">Wout Mergaerts</Heading>
-                <Text mt="3" size="5">.NET Developer, Web Developer & Tinkerer</Text>
-                <Flex direction="column" gap="5" shrink="1" py="3" mt={{ initial: "0", md: "7" }} ml="3">
+        <Flex direction="column" justify="between" align={{ initial: "center", md: "start" }} py="6" height="100%">
+            <Flex direction="column" align={{ initial: "center", md: "start" }} justify="center" >
+                <Heading size={{ initial: "8", xs: "9" }}>Wout Mergaerts</Heading>
+                <Text mt="3" size={{ initial: "4", xs: "5" }}>.NET Developer, Web Developer & Tinkerer</Text>
+                <Flex direction="column" gap="5" shrink="1" py="3" mt={{ initial: "0", md: "7" }} ml={{ initial: "0", md: "3" }}>
                     {sections.map(section => (
-                        <Text size="5"
+                        <Text size={{ initial: "4", xs: "5" }}
                             className={active === section ? "active link" : "link"}
                             color={active === section ? "violet" : "gray"}
                             key={section} asChild>

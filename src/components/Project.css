@@ -1,8 +1,8 @@
-.projectlink{
+.projectlink {
     color: var(--gray-12) !important;
 }
 
-.projectlink:hover{
+.projectlink:hover {
     color: var(--accent-a11) !important;
 }
 
@@ -12,6 +12,6 @@
     transition-duration: .3s;
 }
 
-.projectlink:hover > .arrow {
-     transform: rotate(405deg);
+.projectlink:hover>.arrow {
+    transform: rotate(405deg);
 }

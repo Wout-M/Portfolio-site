@@ -3,6 +3,6 @@
     font-weight: 500;
 }
 
-.url:hover{
+.url:hover {
     color: var(--accent-a11) !important;
 }

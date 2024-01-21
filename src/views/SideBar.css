@@ -4,8 +4,7 @@
     transition-duration: .15s;
 }
 
-.active{
-    
+.active {
     font-weight: 800;
     text-decoration: solid underline var(--accent-a11) 2px !important;
 }
